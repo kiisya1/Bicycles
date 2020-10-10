@@ -1,13 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Moon: Велосипеды</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="/fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="sprite">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <div class="wrapper">
+      <header class="header">
+
+        <div class="header__navigation">
+
+          <button class="header__menu-toggle header__menu-toggle--open header__menu-toggle--no-js" type="button">
+            <svg class="header__menu-toggle-svg" width="24" height="14">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <button class="header__menu-toggle header__menu-toggle--close header__menu-toggle--no-js" type="button">
+            <svg class="header__menu-toggle-svg" width="22" height="23">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+
+          <nav class="header__main-nav main-nav main-nav--no-js">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#about">
+                  <span>О&nbsp;нас</span>
+                  <svg class="main-nav__svg" width="8" height="12">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                </a>
+
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#types">
+                  <span>Виды велосипедов</span>
+                  <svg class="main-nav__svg" width="8" height="12">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#video">
+                  <span>Видео про велосипеды</span>
+                  <svg class="main-nav__svg" width="8" height="12">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#contacts">
+                  <span>Контакты</span>
+                  <svg class="main-nav__svg" width="8" height="12">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <section class="header__info">
+          <a class="header__logo logo">
+            <img class="logo__image" src="img/logo.svg" width="68" height="20" alt="Логотип компании Moon: Мы продаем велосипеды">
+          </a>
+          <h1 class="header__title">Мы&nbsp;продаем велосипеды</h1>
+          <p class="header__description">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </section>
+
+        <section class="header__feedback feedback">
+          <p class="feedback__description">Заполните поля ниже и&nbsp;мы&nbsp;подберем велосипед Вашей мечты</p>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+
+            <div class="feedback__input-field">
+              <label>
+                <span class="visually-hidden">Имя</span>
+                <input type="text" name="name" placeholder="Введите Ваше Имя" required>
+              </label>
+            </div>
+
+            <div class="feedback__input-field">
+              <label>
+                <span class="visually-hidden">Номер телефона</span>
+                <input type="tel" name="phone" placeholder="Введите Ваш номер телефона" required>
+              </label>
+            </div>
+
+            <button type="submit">Подобрать велосипед мечты</button>
+          </form>
+        </section>
+
+      </header>
+
+      <main>
+        <section class="about" id="about">
+          <h2 class="about__title">Несколько фактов о&nbsp;нас</h2>
+          <ul class="about__list">
+            <li>
+            <p>Самый широкий выбор велосипедов!</p>
+            </li>
+            <li>
+            <p>Доставка велосипедов по&nbsp;всей России!</p>
+            </li>
+            <li>
+            <p>Большой выбор крутых аксессуаров!</p>
+            </li>
+            <li>
+            <p>Профессиональные консультации!</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="types" id="types">
+          <h2 class="types__title">Виды велосипедов</h2>
+          <ul class="types__list">
+            <li>
+              <a href="#">
+                <div class="types__image-box">
+                  <picture>
+                    <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
+                      <!--по высоте 1х: 503px; 2x: 1006px -->
+                    <img src="img/road-bike@1x.jpg" srcset="img/road-bike@2x.jpg 2x" width="379" height="503" alt="Дорожный велосипед">
+                  </picture>
+                </div>
+                <h3>Дорожный велосипед</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="types__image-box">
+                  <picture>
+                    <source type="image/webp" srcset="img/mount-bike@1x.webp 1x, img/mount-bike@2x.webp 2x">
+                      <!--по высоте 1х: 566px; 2x: 1132px -->
+                    <img src="img/mount-bike@1x.jpg" srcset="img/mount-bike@2x.jpg 2x" width="378" height="566"  alt="Горный велосипед">
+                  </picture>
+                </div>
+                <h3>Горный велосипед</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="types__image-box">
+                  <picture>
+                    <source type="image/webp" srcset="img/kids-bike@1x.webp 1x, img/kids-bike@2x.webp 2x">
+                      <!--по высоте 1х: 513px; 2x: 1026px -->
+                    <img src="img/kids-bike@1x.jpg" srcset="img/kids-bike@2x.jpg 2x" width="513" height="513" alt="Детский велосипед">
+                  </picture>
+                </div>
+                <h3>Детский велосипед</h3>
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+        <section class="video" id="video">
+          <h2 class="video__title">Видео про велосипеды</h2>
+          <p class="video__description">В&nbsp;этом видео мы&nbsp;подробно расскажем про особенности выбора велосипеда для себя.</p>
+          <video controls width="929" height="522" poster="img/video@2x.jpg">
+            <source src="img/video.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+            <source src="img/video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
+          </video>
+          <button class="video__play-button" type="button">
+            <span class="visually-hidden">Воспроизвести</span>
+          </button>
+        </section>
+
+      </main>
+
+      <footer class="footer" id="contacts">
+        <h2 class="footer__title">Как нас найти?</h2>
+        <p class="footer__address">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <section class="footer__map map">
+          <div class="map__container" id="map"></div>
+          <picture>
+            <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
+              <!-- 1х: 957px; 2x: 1914px -->
+            <img class="map__image map__image--no-js" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="957" height="530" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+          </picture>
+        </section>
+
+          <section class="footer__contacts contacts">
+            <h3 class="visually-hidden">Контакты</h3>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">
+                  <svg class="contacts__svg" width="26" height="20">
+                    <use xlink:href="#icon-email"></use>
+                  </svg>
+                  <span class="contacts__email">puteshestviemechta@gmail.ru</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+749978468446">
+                  <svg class="contacts__svg" width="22" height="23">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                  <span>+7&nbsp;(499)&nbsp;-784-684-46</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+      </footer>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=140ed8ca-ce13-4555-9c6b-7dbf1992eb00&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
