@@ -181,7 +181,12 @@
             <source src="img/video.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
             <source src="img/video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
           </video>
-          <button class="video__play-button" type="button">
+          <picture>
+            <source type="image/webp" srcset="img/video@1x.webp 1x, img/video@2x.webp 2x">
+              <!-- 1х: 929px; 2x: 1858px -->
+            <img class="video__image video__image--no-js" src="img/video@1x.jpg" srcset="img/video@2x.jpg 2x" width="929" height="522" alt="Видео о велосипедах">
+          </picture>
+          <button class="video__play-button video__play-button--no-js" type="button">
             <span class="visually-hidden">Воспроизвести</span>
           </button>
         </section>
