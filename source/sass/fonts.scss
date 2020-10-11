@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: local("OpenSans-Regular"),
-    local("Open Sans Regular"),
-    url("../fonts/opensans-regular.woff2") format("woff2"),
-    url("../fonts/opensans-regular.woff") format("woff");
-  font-weight: 400;
+  src: local("OpenSans-Light"),
+    local("Open Sans Light"),
+    url("../fonts/opensans-light.woff2") format("woff2"),
+    url("../fonts/opensans-light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: local("OpenSans-Light"),
-    local("Open Sans Light"),
-    url("../fonts/opensans-light.woff2") format("woff2"),
-    url("../fonts/opensans-light.woff") format("woff");
-  font-weight: 300;
+  src: local("OpenSans-Regular"),
+    local("Open Sans Regular"),
+    url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

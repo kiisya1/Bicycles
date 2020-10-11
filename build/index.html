@@ -25,7 +25,7 @@
     </clipPath>
   </defs><symbol id="icon-arrow" viewBox="0 0 8 12">
   <g clip-path="url(#clip0)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.4L4.6 6 0 10.6 1.4 12l6-6-6-6L0 1.4z" fill="#2C2E3F" fill-opacity=".5"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.4L4.6 6 0 10.6 1.4 12l6-6-6-6L0 1.4z"></path>
   </g>
   
 </symbol><symbol id="icon-close" viewBox="0 0 24 25">
@@ -34,7 +34,7 @@
     </div>
 
     <div class="wrapper">
-      <header class="header">
+      <header class="wrapper__header header">
 
         <div class="header__navigation">
 
@@ -92,8 +92,8 @@
         </div>
 
         <section class="header__info">
-          <a class="header__logo logo">
-            <img class="logo__image" src="img/logo.svg" width="68" height="20" alt="Логотип компании Moon: Мы продаем велосипеды">
+          <a class="header__logo logo logo--no-js">
+            <img class="logo__image" src="img/logo.svg" width="69" height="21" alt="Логотип компании Moon: Мы продаем велосипеды">
           </a>
           <h1 class="header__title">Мы&nbsp;продаем велосипеды</h1>
           <p class="header__description">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -113,7 +113,7 @@
             <div class="feedback__input-field">
               <label>
                 <span class="visually-hidden">Номер телефона</span>
-                <input type="tel" name="phone" placeholder="Введите Ваш номер телефона" required="">
+                <input type="tel" name="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{10,11}" required="">
               </label>
             </div>
 
@@ -123,7 +123,7 @@
 
       </header>
 
-      <main>
+      <main class="wrapper__main">
         <section class="about" id="about">
           <h2 class="about__title">Несколько фактов о&nbsp;нас</h2>
           <ul class="about__list">
@@ -204,7 +204,7 @@
 
       </main>
 
-      <footer class="footer" id="contacts">
+      <footer class="wrapper__footer footer" id="contacts">
         <h2 class="footer__title">Как нас найти?</h2>
         <p class="footer__address">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         <section class="footer__map map">

@@ -1,0 +1,84 @@
+.feedback {
+  width: 327px;
+}
+
+.feedback__description {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 17px;
+  font-weight: $font-semibold;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+
+.feedback__form {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__input-field {
+  margin-bottom: 20px;
+}
+
+.feedback__input-field input {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 29px;
+  margin: 0;
+
+  font-family: $standard-font;
+  font-size: 15px;
+  line-height: 24px;
+  color: $input-color;
+  font-weight: $font-normal;
+
+  background-color: $input-background;
+  border: $input-border;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: rgba($input-color, 0.5);
+  }
+
+  &:hover {
+    border-color: $turquoise;
+  }
+
+  &:focus {
+    border-color: $turquoise;
+    outline: none;
+  }
+}
+
+.feedback__form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  box-sizing: border-box;
+
+  font-family: $standard-font;
+  font-size: 15px;
+  line-height: 21px;
+  color: $btn-color;
+  font-weight: $font-semibold;
+  text-align: center;
+
+  background-color: $btn-background;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $btn-background--hover;
+  }
+}

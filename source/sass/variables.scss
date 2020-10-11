@@ -28,7 +28,8 @@ $white: #ffffff;
 $black: #000000;
 $dark: #131314;
 $gray: #1c1c1c;
-$gray-light: #f6f7f9;
+$gray-light: #f6f6f6;
+$gray-lighten: #f6f7f9;
 $gray-dark: #1f1f1f;
 
 $turquoise: #0ad9c6;
@@ -37,6 +38,7 @@ $turquoise: #0ad9c6;
 
 $background-color: $white;
 $background-color--gray: $gray-light;
+$background-color--gray-light: $gray-lighten;
 $background-color--dark: $dark;
 
 /* Основные цвета текста */
@@ -53,12 +55,12 @@ $color--bright: $turquoise;
 /* Основные цвета кнопок */
 
 $btn-background: $turquoise;
-$btn-background--hover: rgba($turquoise, 0.7);
+$btn-background--hover: lighten($turquoise, 10);
 
 $btn-color: $color--base;
 
 /* Свойства полей ввода */
-$input-color: $color--base;
+$input-color: $gray;
 
 $input-border: 1px solid #c9ccd4;
 

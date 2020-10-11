@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+  width: 69px;
+}
+
+.logo__image {
+  width: 100%;
+}
+
+@media (max-width: $tablet-width) {
+  .logo--no-js {
+    position: absolute;
+    top: 25px;
+    left: 21px;
+  }
+}

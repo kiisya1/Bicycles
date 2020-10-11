@@ -1,0 +1,119 @@
+.main-nav {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav__list {
+  @include reset-list;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 19px;
+}
+
+.main-nav__item {
+  margin-right: 135px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  margin-bottom: 9px;
+
+  line-height: 32px;
+  color: rgba($color--white, 0.7);
+  letter-spacing: -0.005em;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba($color--white, 1);
+  }
+}
+
+.main-nav__svg {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav {
+    display: none;
+
+    &--opened {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      display: block;
+      padding-top: 100px;
+      min-height: 100vh;
+      box-sizing: border-box;
+
+      background-color: $background-color;
+    }
+
+    &--no-js {
+      display: block;
+      padding: 0;
+      padding-top: 70px;
+      min-height: auto;
+    }
+  }
+
+  .main-nav__list {
+    padding-left: 0;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .main-nav__item {
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-nav__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 16px;
+    padding-right: 25px;
+
+    font-size: 20px;
+    line-height: 1.4;
+    color: #48494d;
+    font-weight: $font-normal;
+    letter-spacing: normal;
+
+    background-color: $background-color--gray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #48494d;
+      background-color: darken($background-color--gray, 5);
+    }
+  }
+
+  .main-nav__svg {
+    display: block;
+    fill: rgba(44, 46, 63, 0.5);
+  }
+
+  .main-nav__link:hover .main-nav__svg,
+  .main-nav__link:focus .main-nav__svg,
+  .main-nav__link:active .main-nav__svg {
+    fill: rgba(44, 46, 63, 0.7);
+  }
+
+  .main-nav--no-js .main-nav__item {
+    margin-bottom: 5px;
+  }
+}
