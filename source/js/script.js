@@ -41,18 +41,17 @@
     });
   };
 
-
-  /* Меню */
-
   openButton.classList.remove('header__menu-toggle--no-js');
   openButton.classList.add('header__menu-toggle--active');
   closeButton.classList.remove('header__menu-toggle--no-js');
   logo.classList.remove('logo--no-js');
   nav.classList.remove('main-nav--no-js');
 
-  links.forEach(function (link) {
-    addLinkHandler(link);
-  });
+  if (links.length !== 0) {
+    links.forEach(function (link) {
+      addLinkHandler(link);
+    });
+  }
 
 
   if (openButton) {

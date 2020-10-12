@@ -97,6 +97,12 @@
   .feedback__input-field input {
     padding: 11px 21px;
   }
+
+  .feedback__form button[type="submit"] {
+    padding: 0 25px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -109,6 +115,6 @@
   }
 
   .feedback__input-field input {
-    padding: 12px 26px 10px;
+    padding: 12px 25px 10px;
   }
 }

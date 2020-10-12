@@ -609,7 +609,11 @@ input[type="file"].visually-hidden {
     margin-bottom: 30px;
     font-size: 18px; }
   .feedback__input-field input {
-    padding: 11px 21px; } }
+    padding: 11px 21px; }
+  .feedback__form button[type="submit"] {
+    padding: 0 25px;
+    padding-top: 16px;
+    padding-bottom: 14px; } }
 
 @media (max-width: 767px) {
   .feedback {
@@ -617,7 +621,7 @@ input[type="file"].visually-hidden {
   .feedback__description {
     margin-bottom: 20px; }
   .feedback__input-field input {
-    padding: 12px 26px 10px; } }
+    padding: 12px 25px 10px; } }
 
 .header {
   position: relative;
@@ -754,10 +758,10 @@ input[type="file"].visually-hidden {
 
 @media (max-width: 1023px) {
   .header__logo {
-    margin-bottom: 88px; }
+    margin-bottom: 89px; }
   .header__title {
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     width: 525px;
     font-size: 30px;
     line-height: 42px; }
@@ -775,7 +779,7 @@ input[type="file"].visually-hidden {
     padding-bottom: 70px;
     min-height: 390px; }
   .header__logo {
-    margin-bottom: 74px; }
+    margin-bottom: 75px; }
   .header__title {
     width: 288px; }
   .header__description {
