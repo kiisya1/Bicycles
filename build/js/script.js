@@ -10,6 +10,9 @@
   var nav = header.querySelector('.header__main-nav');
   var links = nav.querySelectorAll('.main-nav__link');
 
+  var map = document.querySelector('.map');
+  var mapContainer = map.querySelector('.map__container');
+
   // Закрываем меню
 
   var closeMenu = function () {
@@ -41,11 +44,13 @@
     });
   };
 
-  openButton.classList.remove('header__menu-toggle--no-js');
-  openButton.classList.add('header__menu-toggle--active');
-  closeButton.classList.remove('header__menu-toggle--no-js');
-  logo.classList.remove('logo--no-js');
-  nav.classList.remove('main-nav--no-js');
+  if (logo) {
+    logo.classList.remove('logo--no-js');
+  }
+
+  if (nav) {
+    nav.classList.remove('main-nav--no-js');
+  }
 
   if (links.length !== 0) {
     links.forEach(function (link) {
@@ -55,6 +60,8 @@
 
 
   if (openButton) {
+    openButton.classList.remove('header__menu-toggle--no-js');
+    openButton.classList.add('header__menu-toggle--active');
     openButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       openMenu();
@@ -62,10 +69,25 @@
   }
 
   if (closeButton) {
+    closeButton.classList.remove('header__menu-toggle--no-js');
     closeButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       closeMenu();
     });
   }
+
+  // Подключаем карту
+
+  if (mapContainer) {
+    map.classList.remove('map--no-js');
+
+    ymaps.ready(init);
+      function init() {
+        var myMap = new ymaps.Map('map', {
+          center: [59.938635, 30.323118],
+          zoom: 16
+        });
+      }
+    }
 
 })();
