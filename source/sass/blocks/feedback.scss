@@ -82,3 +82,33 @@
     background-color: $btn-background--hover;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    width: 321px;
+  }
+
+  .feedback__description {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+  }
+
+  .feedback__input-field input {
+    padding: 11px 21px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    width: 288px;
+  }
+
+  .feedback__description {
+    margin-bottom: 20px;
+  }
+
+  .feedback__input-field input {
+    padding: 12px 26px 10px;
+  }
+}
