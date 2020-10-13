@@ -992,6 +992,10 @@ img.cover {
       border: 17px solid #0ad9c6;
       border-radius: 50%; }
 
+.types__list a {
+  display: block;
+  color: #000000; }
+
 .types__list img {
   position: relative;
   z-index: 3;
@@ -1000,7 +1004,17 @@ img.cover {
   width: 342px;
   border-radius: 10px;
   -o-object-fit: cover;
-     object-fit: cover; }
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms; }
+
+.types__list a:hover img,
+.types__list a:focus img,
+.types__list a:active img {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025); }
 
 .types__list h3 {
   margin: 0;
@@ -1010,7 +1024,6 @@ img.cover {
   line-height: 34px;
   font-weight: 600;
   letter-spacing: -0.5px;
-  color: #000000;
   text-align: center; }
 
 @media (max-width: 1023px) {
