@@ -56,7 +56,7 @@ gulp.task('images', function () {
   return gulp.src(['source/img/**/*.{png,jpg,svg}', '!source/img/icon-*.svg'])
       .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
-        imagemin.mozjpeg({quality: 85, progressive: true}),
+        imagemin.jpegtran({quality: 85, progressive: true}),
         imagemin.svgo()
       ], {
         verbose: true

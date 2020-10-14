@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Moon: Велосипеды</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="Description" content="Велосипеды">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -118,7 +119,9 @@
               </label>
             </div>
 
-            <button type="submit">Подобрать велосипед мечты</button>
+            <button type="submit">
+              <span>Подобрать велосипед мечты</span>
+              </button>
           </form>
         </section>
 
@@ -183,18 +186,23 @@
         <section class="video" id="video">
           <h2 class="video__title">Видео про велосипеды</h2>
           <p class="video__description">В&nbsp;этом видео мы&nbsp;подробно расскажем про особенности выбора велосипеда для себя.</p>
-          <video controls="" width="929" height="522" poster="img/video@2x.jpg">
-            <source src="img/video.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
-            <source src="img/video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
-          </video>
-          <picture>
-            <source type="image/webp" srcset="img/video@1x.webp 1x, img/video@2x.webp 2x">
-              <!-- 1х: 929px; 2x: 1858px -->
-            <img class="video__image video__image--no-js" src="img/video@1x.jpg" srcset="img/video@2x.jpg 2x" width="929" height="522" alt="Видео о велосипедах">
-          </picture>
-          <button class="video__play-button video__play-button--no-js" type="button">
-            <span class="visually-hidden">Воспроизвести</span>
-          </button>
+          <div class="video__container">
+            <video class="video__video" controls="" width="929" height="522" poster="img/video@2x.jpg">
+              <source src="img/video.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+              <source src="img/video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
+            </video>
+            <picture>
+              <source type="image/webp" srcset="img/video@1x.webp 1x, img/video@2x.webp 2x">
+                <!-- 1х: 929px; 2x: 1858px -->
+              <img class="video__image video__image--no-js" src="img/video@1x.jpg" srcset="img/video@1x.jpg 2x" width="929" height="522" alt="Видео о велосипедах">
+            </picture>
+            <button class="video__play-button video__play-button--no-js" type="button">
+              <span class="visually-hidden">Воспроизвести</span>
+              <svg class="video__play-svg" width="13" height="18">
+                <use xlink:href="#icon-play"></use>
+              </svg>
+            </button>
+          </div>
         </section>
 
       </main>
@@ -207,7 +215,7 @@
           <picture>
             <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
               <!-- 1х: 957px; 2x: 1914px -->
-            <img class="map__image cover" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="957" height="530" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+            <img class="map__image" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="957" height="530" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19">
           </picture>
         </section>
 
@@ -236,7 +244,6 @@
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=65f517ec-c1f4-4e3d-8b89-01a81a0efb0f&lang=ru_RU" type="text/javascript"></script>
-    <script src="js/vendor.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

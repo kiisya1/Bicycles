@@ -1,6 +1,6 @@
 .about {
   margin-bottom: 133px;
-  padding: 0 calc(50vw - 602px);
+  padding: 0 calc(50% - 602px);
 
   text-align: center;
 }
@@ -66,7 +66,7 @@
 @media (max-width: $tablet-width) {
   .about {
     margin-bottom: 29px;
-    padding: 0 calc(50vw - 293px);
+    padding: 0 calc(50% - 293px);
   }
 
   .about__title {

@@ -1,7 +1,7 @@
 .types {
-  padding: 0 calc(50vw - 636px);
+  padding: 0 calc(50% - 636px);
   padding-top: 151px;
-  padding-bottom: 107px;
+  padding-bottom: 109px;
   box-sizing: border-box;
 
   background-color: $background-color--gray-light;
@@ -142,9 +142,9 @@
 
 @media (max-width: $tablet-width) {
   .types {
-    padding: 0 calc(50vw - 320px);
+    padding: 0 calc(50% - 320px);
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
 
   .types__title {
