@@ -40,17 +40,14 @@
 
         <div class="header__navigation">
 
-          <button class="header__menu-toggle header__menu-toggle--open header__menu-toggle--no-js" type="button">
+          <button class="header__menu-toggle header__menu-toggle--no-js" type="button">
             <svg class="header__menu-toggle-svg" width="24" height="14">
               <use xlink:href="#icon-menu"></use>
             </svg>
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <button class="header__menu-toggle header__menu-toggle--close header__menu-toggle--no-js" type="button">
-            <svg class="header__menu-toggle-svg" width="22" height="23">
+            <svg class="header__menu-toggle-svg header__menu-toggle-svg--close" width="22" height="23">
               <use xlink:href="#icon-close"></use>
             </svg>
-            <span class="visually-hidden">Закрыть меню</span>
+            <span class="visually-hidden">Открыть меню</span>
           </button>
 
           <nav class="header__main-nav main-nav main-nav--no-js">
@@ -150,31 +147,31 @@
           <h2 class="types__title">Виды велосипедов</h2>
           <ul class="types__list">
             <li>
-              <a href="#">
+              <a class="types__link" href="#">
                 <picture>
                   <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
                     <!--по высоте 1х: 503px; 2x: 1006px -->
-                  <img src="img/road-bike@1x.jpg" srcset="img/road-bike@2x.jpg 2x" width="379" height="503" alt="Дорожный велосипед">
+                  <img src="img/road-bike@1x.jpg" srcset="img/road-bike@2x.jpg 2x" width="379" height="503" alt="Дорожный велосипед" data-object-fit="cover">
                 </picture>
                 <h3>Дорожный велосипед</h3>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a class="types__link" href="#">
                 <picture>
                   <source type="image/webp" srcset="img/mount-bike@1x.webp 1x, img/mount-bike@2x.webp 2x">
                     <!--по высоте 1х: 566px; 2x: 1132px -->
-                  <img src="img/mount-bike@1x.jpg" srcset="img/mount-bike@2x.jpg 2x" width="378" height="566" alt="Горный велосипед">
+                  <img src="img/mount-bike@1x.jpg" srcset="img/mount-bike@2x.jpg 2x" width="378" height="566" alt="Горный велосипед" data-object-fit="cover">
                 </picture>
                 <h3>Горный велосипед</h3>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a class="types__link" href="#">
                 <picture>
                   <source type="image/webp" srcset="img/kids-bike@1x.webp 1x, img/kids-bike@2x.webp 2x">
                     <!--по высоте 1х: 513px; 2x: 1026px -->
-                  <img src="img/kids-bike@1x.jpg" srcset="img/kids-bike@2x.jpg 2x" width="513" height="513" alt="Детский велосипед">
+                  <img src="img/kids-bike@1x.jpg" srcset="img/kids-bike@2x.jpg 2x" width="513" height="513" alt="Детский велосипед" data-object-fit="cover">
                 </picture>
                 <h3>Детский велосипед</h3>
               </a>
@@ -215,7 +212,7 @@
           <picture>
             <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
               <!-- 1х: 957px; 2x: 1914px -->
-            <img class="map__image" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="957" height="530" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+            <img class="map__image" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="957" height="530" alt="Адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19" data-object-fit="cover">
           </picture>
         </section>
 
@@ -244,6 +241,7 @@
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=65f517ec-c1f4-4e3d-8b89-01a81a0efb0f&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/vendor.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

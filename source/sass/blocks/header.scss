@@ -90,7 +90,7 @@
     right: 0;
     z-index: 10;
 
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
@@ -110,7 +110,7 @@
       background-color: $btn-background--hover;
     }
 
-    &--close {
+    &--active {
       position: fixed;
       width: 50px;
       height: 52px;
@@ -123,12 +123,20 @@
       }
     }
 
-    &--active {
-      display: flex;
-    }
-
     &--no-js {
       display: none;
+    }
+  }
+
+  .header__menu-toggle-svg--close {
+    display: none;
+  }
+
+  .header__menu-toggle--active .header__menu-toggle-svg {
+    display: none;
+
+    &--close {
+      display: block;
     }
   }
 

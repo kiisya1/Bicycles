@@ -1,6 +1,6 @@
 .contacts {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   width: 559px;
   margin: 0 auto;
-  padding-right: 6px;
+  padding-right: 5px;
 }
 
 .contacts__item {

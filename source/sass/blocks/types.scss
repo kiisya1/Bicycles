@@ -36,6 +36,7 @@
   margin-top: 41px;
   margin-bottom: 40px;
   padding-left: 60px;
+  width: 342px;
 
   &::before {
     content: "";
@@ -103,7 +104,7 @@
   }
 }
 
-.types__list a {
+.types__link {
   display: block;
   color: $color--base;
 }
@@ -122,9 +123,9 @@
   transition: transform 300ms;
 }
 
-.types__list a:hover img,
-.types__list a:focus img,
-.types__list a:active img {
+.types__link:hover img,
+.types__link:focus img,
+.types__link:active img {
   transform: scale(1.025);
 }
 
@@ -161,6 +162,7 @@
     margin-bottom: 30px;
     padding-left: 0;
     padding-top: 20px;
+    width: 270px;
 
     &::before {
       top: auto;

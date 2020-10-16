@@ -1,5 +1,13 @@
 'use strict';
 (function () {
 // Полифилл object-fit
-this.fitie=function(d){var l,h,c,t,g,m,e,u,f,s,p,v=d.currentStyle?d.currentStyle["object-fit"]:null;function b(){u.call(d,f+p,b);var e={boxSizing:"content-box",display:"inline-block",overflow:"hidden"};"backgroundColor backgroundImage borderColor borderStyle borderWidth bottom fontSize lineHeight height left opacity margin position right top visibility width".replace(/\w+/g,function(t){e[t]=m[t]}),g.border=g.margin=g.padding=0,g.display="block",g.height=g.width="auto",g.opacity=1;var t,i=d.videoWidth||d.width,n=d.videoHeight||d.height,o=i/n,r=document.createElement("object-fit");for(var a in r.appendChild(d.parentNode.replaceChild(r,d)),e)r.runtimeStyle[a]=e[a];"fill"===v?s?(g.width=l,g.height=h):(g["-ms-transform-origin"]="0% 0%",g["-ms-transform"]="scale("+l/i+","+h/n+")"):(o<c?"contain"===v:"cover"===v)?(t=h*o,g.width=Math.round(t)+"px",g.height=h+"px",g.marginLeft=Math.round((l-t)/2)+"px"):(t=l/o,g.width=l+"px",g.height=Math.round(t)+"px",g.marginTop=Math.round((h-t)/2)+"px")}v&&/^(contain|cover|fill)$/.test(v)&&(l=d.clientWidth,h=d.clientHeight,c=l/h,t=d.nodeName.toLowerCase(),g=d.runtimeStyle,m=d.currentStyle,e=d.addEventListener||d.attachEvent,u=d.removeEventListener||d.detachEvent,f=d.addEventListener?"":"on",p=(s="img"===t)?"load":"loadedmetadata",e.call(d,f+p,b),d.complete&&b())},this.fitie.init=function(){if(document.body)for(var t=document.querySelectorAll("img,video"),e=-1;t[++e];)fitie(t[e]);else setTimeout(fitie.init)},/MSIE|Trident/.test(navigator.userAgent)&&this.fitie.init();
+if ('objectFit' in document.documentElement.style === false) {
+	document.addEventListener('DOMContentLoaded', function () {
+		Array.prototype.forEach.call(document.querySelectorAll('img[data-object-fit]'), function (image) {
+			(image.runtimeStyle || image.style).background = 'url("' + image.src + '") no-repeat 50%/' + (image.currentStyle ? image.currentStyle['object-fit'] : image.getAttribute('data-object-fit'));
+
+			image.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'' + image.width + '\' height=\'' + image.height + '\'%3E%3C/svg%3E';
+		});
+	});
+}
 })();
