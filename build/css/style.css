@@ -1198,17 +1198,18 @@ img.cover {
 @media (max-width: 767px) {
   .video {
     margin-bottom: 119px;
-    padding: 0 16px;
+    padding: 0 14px;
     padding-top: 84px; }
   .video__title {
-    padding-right: 0;
+    padding-right: 10px;
     width: 282px;
     font-size: 24px; }
   .video__description {
     margin-bottom: 4px;
     width: 288px; }
   .video__container {
-    bottom: -49px; }
+    bottom: -49px;
+    margin: 0 2px; }
   .video__play-button {
     width: 65px;
     height: 65px;
