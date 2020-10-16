@@ -10,14 +10,16 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-
-  margin-left: -17px;
+  width: 559px;
+  margin: 0 auto;
+  padding-right: 6px;
 }
 
 .contacts__item {
   margin-right: 90px;
+  margin-bottom: 20px;
 
-  &:last-child {
+  &:nth-child(2n+2) {
     margin-right: 0;
   }
 }
@@ -45,7 +47,7 @@
 
 @media (max-width: $tablet-width) {
   .contacts__list {
-    margin-left: -11px;
+    width: 552px;
   }
 }
 
@@ -53,8 +55,9 @@
   .contacts__list {
     flex-direction: column;
     justify-content: center;
+    padding-right: 0;
 
-    margin-left: 0;
+    margin: 0;
   }
 
   .contacts__item {
